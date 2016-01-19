@@ -16,3 +16,9 @@ information
 -----------
 
 If you are to read localised json files from your server, you absolutely must need a backend - this cannot be stressed enough. Otherwise the i18next can only give localisations from a JSON array embedded in the i18n options parameter. Also, don't forget the callback in init returns two parameters - the right translation object and an error.
+
+If you want to know how to run it, you can stick this code on an apache web server directory. I personally just ran
+
+    python -m SimpleHTTPServer 9004
+
+in the directory (for you, it's where you git cloned it). Go to the browser and visit http://localhost:9004 and you should see the sample project up and running. I think the above line should work on any platform that supports Python, although I did this on Linux.
