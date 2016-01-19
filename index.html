@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="js/i18next.min.js"></script>
+<script src="js/i18nextXHRBackend.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	console.log("Booting");
+	i18next.use(i18nextXHRBackend);
+	i18next.init({
+		debug: true,
+		lng: navigator.language,
+		resGetPath: "locales/__lng__/__ns__.json"
+	}, function(err, n) {
+		console.log(n('message'));
+	})
+</script>
+</body>
+</html>
